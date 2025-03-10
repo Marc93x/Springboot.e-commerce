@@ -17,12 +17,9 @@ spring:
     user:
       name: user
       password: ${SECURITY_PASSWORD:test123}
-  resources:
-    static-locations: classpath:/static/, classpath:/public/  # Répertoires de ressources statiques
-    add-mappings: false  # Désactive la gestion automatique des ressources statiques
 
 server:
-  port: 8180 
+  port: 8180
 logging:
   level:
     root: INFO
