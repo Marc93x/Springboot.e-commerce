@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ${DB_PASSWORD:marc123}
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  security:
+    user:
+      name: user
+      password: ${SECURITY_PASSWORD:test123}
+  resources:
+    static-locations: classpath:/static/, classpath:/public/  # Répertoires de ressources statiques
+    add-mappings: false  # Désactive la gestion automatique des ressources statiques
+
+server:
+  port: 8180 
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    org.springframework.boot: DEBUG
+    com.example.ecommerce: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
