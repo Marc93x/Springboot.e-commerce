@@ -1,7 +1,6 @@
-## Repertoire
-/target
-
-## file 
-
+# Ignorer le fichier generator.sh
 generator.sh
+
+# Ignorer le répertoire target
+target/
 
